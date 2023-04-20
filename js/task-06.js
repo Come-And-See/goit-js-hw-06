@@ -12,10 +12,19 @@ refs.input.addEventListener("blur", onInputChange);
 
 function onInputChange(event) {
   if (event.currentTarget.value.length === +refs.input.dataset.length) {
-    refs.input.classList.remove("invalid");
-    refs.input.classList.add("valid");
+    onInputClassRemove("invalid");
+    onInputClassAdd("valid");
+    
   } else {
-    refs.input.classList.remove("valid");
-    refs.input.classList.add("invalid");
+    onInputClassRemove("valid");
+    onInputClassAdd("invalid");
   }
+}
+
+function onInputClassRemove(e) {
+  refs.input.classList.remove(`${e}`);
+}
+
+function onInputClassAdd(e) {
+  refs.input.classList.add(`${e}`);
 }
