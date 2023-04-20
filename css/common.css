@@ -36,3 +36,9 @@ button {
   width: 100%;
   height: auto;
 }
+#boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
